@@ -81,10 +81,10 @@ EXIT /B 0
     ECHO #                                                                     #
     ECHO #          Microsoft Build Engine, better known as 'MSBuild'.         #
     ECHO #                                                                     #
-    ECHO # TOOL   : MSBuild                                                    #
+    ECHO # TOOL: MSBuild                                                       #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #   %SCRIPT_NAME% [-h^|--help]                                             #
+    ECHO #     %SCRIPT_NAME% [-h^|--help]                                           #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
     ECHO #     %script_name% --help                                                #
