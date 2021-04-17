@@ -1,0 +1,30 @@
+
+                          M S B u i l d
+
+        Microsoft Build Engine, better known as 'MSBuild'.
+
+        After running the setup.cmd we can use the Microsoft
+        MSBuild from the command line. The Microsoft build tools
+        must be installed beforehand.
+
+TOOL   : MSBuild
+VERSION: 1.0.0
+
+USAGE:
+    setup.cmd [-h|--help]
+
+EXAMPLES:
+    setup.cmd --help
+
+ARGUMENTS:
+    -h|--help    Print this help and exit.
+
+EXPORTED ENVIRONMENT VARIABLES:
+    TOOLSET_MSBUILD_PATH    The path where the msbuild is located.
+
+    PATH    This tool will export all local changes that it made to
+        the path's environment variable.
+
+    The environment variables will be exported only if this tools
+    executes without any error.
+

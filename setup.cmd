@@ -5,6 +5,8 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 
 :PROCESS_CMD
     SET "utility_folder=%~dp0"
+
+    REM Load dependent tools...
     CALL "%utility_folder%..\win-utils\setup.cmd" cecho vswhere
 
     SET help_val=false
@@ -60,15 +62,15 @@ EXIT /B 0
 
 
 :SHOW_INFO
-    cecho {olive}[TOOLSET - UTILS - MSBUILD]{default} INFO: %~1{\n}
+    cecho {olive}[TOOLSET - MSBUILD]{default} INFO: %~1{\n}
 EXIT /B 0
 
 :SHOW_DETAIL
-    cecho {white}[TOOLSET - UTILS - MSBUILD]{default} DETAIL: %~1{\n}
+    cecho {white}[TOOLSET - MSBUILD]{default} DETAIL: %~1{\n}
 EXIT /B 0
 
 :SHOW_ERROR
-    cecho {olive}[TOOLSET - UTILS - MSBUILD]{red} ERROR: %~1 {default} {\n}
+    cecho {olive}[TOOLSET - MSBUILD]{red} ERROR: %~1 {default} {\n}
 EXIT /B 0
 
 
@@ -77,11 +79,16 @@ EXIT /B 0
     SET "script_name=%~n0%~x0"
     ECHO #######################################################################
     ECHO #                                                                     #
-    ECHO #                      T O O L   S E T U P                            #
+    ECHO #                        T O O L   S E T U P                          #
     ECHO #                                                                     #
     ECHO #          Microsoft Build Engine, better known as 'MSBuild'.         #
     ECHO #                                                                     #
-    ECHO # TOOL: MSBuild                                                       #
+    ECHO #          After running the %SCRIPT_NAME% we can use the Microsoft   #
+    ECHO #          MSBuild from the command line. The Microsoft build tools   #
+    ECHO #          must be installed beforehand.                              #
+    ECHO #                                                                     #
+    ECHO # TOOL   : MSBuild                                                       #
+    ECHO # VERSION: 1.0.0                                                      #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
     ECHO #     %SCRIPT_NAME% [-h^|--help]                                           #
